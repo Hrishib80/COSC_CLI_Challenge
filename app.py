@@ -35,9 +35,10 @@ def conversion(response):
     temp = float(response['tempt'])
     if(response['type_of_conversion'] == 'Celcius to Fahrenheit'):
         temp = (temp*(9/5)) + 32
+        cprint(f"The temperature in Farenheit is {temp}", color='green',attrs=['bold'])
     else:
         temp = (temp-32)*(5/9)
-    cprint(f"The temperature in Farenheit is {temp}", color='green',attrs=['bold'])
+        cprint(f"The temperature in Celcius is {temp}", color='green',attrs=['bold'])
 
 question = [
         {
